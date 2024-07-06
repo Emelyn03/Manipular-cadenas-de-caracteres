@@ -1,0 +1,39 @@
+def operaciones_con_cadena(texto):
+
+  texto_mayusculas = texto.upper()
+  texto_minusculas = texto.lower()
+
+  dos_primeros_caracteres = texto[:2]
+  dos_ultimos_caracteres = texto[-2:]
+
+
+  if texto:
+      ultimo_caracter = texto[-1]
+      repeticiones_ultimo_caracter = texto.count(ultimo_caracter)
+  else:
+      repeticiones_ultimo_caracter = 0
+
+ 
+  texto_invertido = texto[::-1]
+
+  return {
+      "texto_mayusculas": texto_mayusculas,
+      "texto_minusculas": texto_minusculas,
+      "dos_primeros_caracteres": dos_primeros_caracteres,
+      "dos_ultimos_caracteres": dos_ultimos_caracteres,
+      "repeticiones_ultimo_caracter": repeticiones_ultimo_caracter,
+      "texto_invertido": texto_invertido
+  }
+
+
+texto = input("Introduce un texto: ")
+
+
+resultados = operaciones_con_cadena(texto)
+
+print("Texto en mayúsculas:", resultados["texto_mayusculas"])
+print("Texto en minúsculas:", resultados["texto_minusculas"])
+print("Dos primeros caracteres:", resultados["dos_primeros_caracteres"])
+print("Dos últimos caracteres:", resultados["dos_ultimos_caracteres"])
+print("Repeticiones del último caracter:", resultados["repeticiones_ultimo_caracter"])
+print("Texto invertido:", resultados["texto_invertido"])
